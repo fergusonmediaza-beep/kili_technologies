@@ -6,471 +6,13 @@
     <title>About Us | Kili Technologies</title>
     <!-- Public Sans from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        /* ---- Reset & Base ---- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: #fff;
-            background-color: #2e4453; 
-        }
-
-        /* ---- Header (same as index.html) ---- */
-        header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .brand img {
-            height: 210px;
-            margin-top: -70px;
-            margin-left: -150px;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-            margin-top: -70px;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            font-size: 1.3rem;
-            transition: color 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: #007bff;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .hamburger-line {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-        }
-
-        .hamburger.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
-        /* ==== ABOUT SECTION ==== */
-        .about-section {
-            padding: 10rem 5% ;
-            /* background-color: #2e4453; */
-        }
-
-        .about-card {
-            position: relative;
-            width: 100%;
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 8rem 2rem;
-            background: url('kili-about.png') no-repeat center center;
-            background-size: cover;
-            border-radius: 0; 
-            overflow: hidden;
-        }
-
-        .about-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* background: rgba(27, 51, 80, 0.7);  */
-            z-index: 1;
-        }
-
-        .about-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            text-align: center;
-            padding: 0;
-        }
-
-        .about-content h1 {
-            font-size: 3.2rem;
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-            line-height: 1.4;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            font-weight: 400;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ==== WHAT WE STAND FOR SECTION ==== */
-        .values-section {
-            padding: 4rem 5%;
-            background-color: white;
-            color: #1b3350;
-            text-align: center;
-        }
-
-        .values-section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            font-weight: 600;
-            color: #1b3350;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 6rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .value-card {
-            padding: 1.5rem;
-            text-align: center;
-            background: none;
-            border: none;
-        }
-
-        .value-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1rem;
-            fill: #1b3350;
-        }
-
-        .value-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #1b3350;
-        }
-
-        .value-desc {
-            font-size: 0.95rem;
-            line-height: 1.5;
-            color: #555;
-            text-align: center;
-        }
-
-
-
-        /* ==== LEADERSHIP SECTION ==== */
-.leadership-section {
-    padding: 5rem 5%;
-    background-color: #2e4453;
-    color: white;
-    text-align: center;
-}
-
-.leadership-section h2 {
-    font-size: 2.8rem;
-    margin-bottom: 2.5rem;
-    font-weight: 600;
-}
-
-.leadership-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.leader-card {
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 8px;
-    padding: 1.8rem 1.2rem;
-    transition: transform 0.3s ease, background 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.leader-card:hover {
-    transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.leader-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: 2px solid rgba(255, 255, 255, 0.15);
-}
-
-.leader-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-    line-height: 1.3;
-}
-
-.leader-role {
-    font-size: 0.95rem;
-    color: #a0b8c8;
-    font-weight: 400;
-}
-
-
-.leader-card.advisory .leader-role {
-    color: #88a0b0;
-}
-
-
-/* ==== BACK TO TOP BUTTON ==== */
-#backToTop {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 48px;
-    height: 48px;
-    background-color: #1b3350;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-}
-
-#backToTop.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-#backToTop:hover,
-#backToTop:focus {
-    background-color:  #2e4453;
-    transform: translateY(-2px);
-    outline: none;
-}
-
-#backToTop:active {
-    transform: translateY(0);
-}
-
-#backToTop svg {
-    display: block;
-    margin: auto;
-}
-
-
-
- /* ==== FOOTER ==== */
-        .site-footer {
-            background-color: white;
-            color: #2e4453;
-            padding: 2rem 5% 1rem;
-            text-align: center;
-        }
-
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-logo img {
-            height: 200px;
-            position: relative;
-            right: 80px;
-        }
-
-        .footer-social h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-icons a img {
-            width: 30px;
-            height: 30px;
-            padding: 4px;
-            transition: transform 0.3s;
-        }
-
-        .social-icons a img:hover {
-            transform: scale(1.1);
-        }
-
-        .footer-copyright p {
-            font-size: 0.9rem;
-            color: #666;
-            margin: 0;
-        }
-
-/* ==== MOBILE ==== */
-@media (max-width: 768px) {
-    /* Header & Navigation */
-    header {
-        padding: 0.6rem 4%; 
-        flex-direction: row; 
-        align-items: flex-start; 
-        justify-content: space-between;
-        gap: 0;
-    }
-
-    .brand img {
-        height: 110px;
-        margin: -1.5rem 0 0 3rem; 
-    }
-
-    .hamburger {
-        display: flex;
-        margin-top: 1rem; 
-        margin-left: auto;
-    }
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        background: rgba(46, 68, 83, 0.95);
-        padding: 1.2rem 0;
-        z-index: 999;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    /* About Section */
-    .about-section {
-        padding: 5rem 5% 3rem;
-    }
-
-    .about-card {
-        padding: 3.5rem 1.2rem;
-    }
-
-    .about-content h1 {
-        font-size: 2rem;
-    }
-
-    .about-content p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-
-    /* Values Section */
-    .values-section {
-        padding: 2.5rem 5% 2rem;
-    }
-
-    .values-section h2 {
-        font-size: 2rem;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    /* Leadership Section */
-    .leadership-section {
-        padding: 2.5rem 5% 2rem;
-    }
-
-    .leadership-section h2 {
-        font-size: 2rem;
-    }
-
-    .leader-card {
-        padding: 1.4rem 1rem;
-    }
-
-    .leader-photo {
-        width: 76px;
-        height: 76px;
-    }
-
-    .leader-name {
-        font-size: 1.05rem;
-    }
-
-    /* Footer */
-    .footer-top {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-    }
-
-    .footer-logo img {
-        height: 110px;
-        position: static;
-        margin: 0 auto;
-    }
-
-    /* Back to Top */
-    #backToTop {
-        width: 38px;
-        height: 38px;
-        bottom: 1rem;
-        right: 1rem;
-    }
-}
-
-    </style>
+    <link rel="stylesheet" href="css/about.css">
+    
 </head>
 <body>
     <header>
         <div class="brand">
-            <img src="kili-logo.png" alt="Kili Technologies Logo">
+            <img src="images/kili-logo.png" alt="Kili Technologies Logo">
         </div>
 
         <button class="hamburger" aria-label="Toggle menu">
@@ -479,10 +21,18 @@
             <span class="hamburger-line"></span>
         </button>
 
-        <nav class="nav-menu">
+
+                <nav class="nav-menu" id="desktopNav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="solutions.html">Solutions</a>
+            <div class="dropdown">
+                <a href="solutions.html">Solutions</a>
+                <div class="dropdown-content">
+                    <a href="das.html">Data Acquisition System (DAS)</a>
+                    <a href="ems.html">Energy Management System (EMS)</a>
+                    <a href="brp.html">BRP as a Service</a> 
+                </div>
+            </div>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
@@ -508,17 +58,17 @@
     <h2>What We Stand For</h2>
     <div class="values-grid">
         <div class="value-card">
-            <img class="value-icon" src="integrity.jpg" alt="Integrity">
+            <img class="value-icon" src="images/integrity.jpg" alt="Integrity">
             <div class="value-title">Integrity</div>
             <div class="value-desc">Trusted, verifiable, and bankable data streams.</div>
         </div>
         <div class="value-card">
-            <img class="value-icon" src="innovation.png" alt="Innovation">
+            <img class="value-icon" src="images/innovation.png" alt="Innovation">
             <div class="value-title">Innovation</div>
             <div class="value-desc">Cutting-edge IoT, monitoring, analytics, and automation.</div>
         </div>
         <div class="value-card">
-            <img class="value-icon" src="partnership.png" alt="Partnership">
+            <img class="value-icon" src="images/partnership.png" alt="Partnership">
             <div class="value-title">Partnership</div>
             <div class="value-desc">Collaborative solutions built with and for our clients.</div>
         </div>
@@ -534,7 +84,7 @@
             <!-- Non-Executive Chairman -->
             <div class="leader-card">
              
-                <img class="leader-photo" src="mavuso_msimang.jpg" alt="Mr. Mavuso Msimang">
+                <img class="leader-photo" src="images/mavuso_msimang.jpg" alt="Mr. Mavuso Msimang">
                 <div class="leader-name">Mr. Mavuso Msimang</div>
                 <div class="leader-role">Non-Executive Chairman</div>
             </div>
@@ -542,7 +92,7 @@
             <!-- Strategic Advisor -->
             <div class="leader-card">
                 
-                <img class="leader-photo" src="grant-ballard.jpg" alt="Ambassador R. Tremeer Ballard">
+                <img class="leader-photo" src="images/grant-ballard.jpg" alt="Ambassador R. Tremeer Ballard">
                 <div class="leader-name">Ambassador R. Tremeer Ballard</div>
                 <div class="leader-role">Strategic Advisor</div>
             </div>
@@ -550,7 +100,7 @@
             <!-- CEO -->
             <div class="leader-card">
                 <!-- Replace 'm-dube.jpg' -->
-                <img class="leader-photo" src="placeholder.jpg" alt="Mr. M. Dube">
+                <img class="leader-photo" src="images/placeholder.jpg" alt="Mr. M. Dube">
                 <div class="leader-name">Mr. M. Dube</div>
                 <div class="leader-role">Chief Executive Officer</div>
             </div>
@@ -558,19 +108,19 @@
             <!-- Advisory Board -->
             <div class="leader-card advisory">
                
-                <img class="leader-photo" src="placeholder.jpg" alt="Ambassador V.K. Khumalo">
+                <img class="leader-photo" src="images/placeholder.jpg" alt="Ambassador V.K. Khumalo">
                 <div class="leader-name">Ambassador V.K. Khumalo</div>
                 <div class="leader-role">Advisory Board</div>
             </div>
             <div class="leader-card advisory">
                 
-                <img class="leader-photo" src="placeholder.jpg" alt="Alderman Siva Moodley">
+                <img class="leader-photo" src="images/placeholder.jpg" alt="Alderman Siva Moodley">
                 <div class="leader-name">Alderman Siva Moodley</div>
                 <div class="leader-role">Advisory Board</div>
             </div>
             <div class="leader-card advisory">
                 
-                <img class="leader-photo" src="thabo-mosala.jpg" alt="Dr. T. Mosala">
+                <img class="leader-photo" src="images/thabo-mosala.jpg" alt="Dr. T. Mosala">
                 <div class="leader-name">Dr. T. Mosala</div>
                 <div class="leader-role">Advisory Board</div>
             </div>
@@ -578,14 +128,14 @@
             <!-- Technology Lead -->
             <div class="leader-card">
                 
-                <img class="leader-photo" src="samuel-marabe.jpg" alt="Mr. S. Marabe">
+                <img class="leader-photo" src="images/samuel-marabe.jpg" alt="Mr. S. Marabe">
                 <div class="leader-name">Mr. S. Marabe</div>
                 <div class="leader-role">Technology Lead</div>
             </div>
 
             <!-- Finance Director -->
             <div class="leader-card">
-                <img class="leader-photo" src="mfanufikile-daza.jpg" alt="Mr. M. Daza CA(SA)">
+                <img class="leader-photo" src="images/mfanufikile-daza.jpg" alt="Mr. M. Daza CA(SA)">
                 <div class="leader-name">Mr. M. Daza CA(SA)</div>
                 <div class="leader-role">Finance Director</div>
             </div>
@@ -598,16 +148,16 @@
     <footer class="site-footer">
         <div class="footer-top">
             <div class="footer-logo">
-                <img src="kili-logo.png" alt="Kili Technologies Logo">
+                <img src="images/kili-logo.png" alt="Kili Technologies Logo">
             </div>
             <div class="footer-social">
                 <h3>Connect with us</h3>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/" target="_blank">
-                        <img src="instagram.png" alt="Instagram">
+                        <img src="images/instagram.png" alt="Instagram">
                     </a>
                     <a href="https://www.linkedin.com/company/kili-energy-pty-ltd/" target="_blank">
-                        <img src="linkedin.png" alt="LinkedIn">
+                        <img src="images/linkedin.png" alt="LinkedIn">
                     </a>
                 </div>
             </div>
@@ -623,71 +173,6 @@
         <path d="M12 19V5M5 12l7-7 7 7"/>
     </svg>
 </button>
-</body>
-</html>
-
-
-    <!-- JS for Social Icons -->
-    <script>
-
-        // Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    // Optional: animate hamburger → ×
-    hamburger.classList.toggle('active');
-});
-
-        document.addEventListener('DOMContentLoaded', () => {
-          document.querySelectorAll('.social-icons img').forEach(img => {
-            img.style.cursor = 'pointer';
-            img.setAttribute('tabindex', '0');
-
-            const handleClick = () => {
-              const parent = img.closest('a');
-              if (parent && parent.href) {
-                window.open(parent.href, '_blank', 'noopener,noreferrer');
-              }
-            };
-
-            img.addEventListener('click', handleClick);
-            img.addEventListener('keydown', e => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                handleClick();
-              }
-            });
-
-            img.addEventListener('mouseenter', () => img.style.transform = 'scale(1.15)');
-            img.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
-          });
-        });
-
-
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('backToTop');
-
-    // Show button after scrolling down 400px
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            btn.classList.add('show');
-        } else {
-            btn.classList.remove('show');
-        }
-    });
-
-    // Smooth scroll to top when clicked
-    btn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});
-    </script>
+   <script src="js/about.js"></script>
 </body>
 </html>
