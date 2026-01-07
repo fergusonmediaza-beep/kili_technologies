@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kili Technologies</title>
+    <!-- Public Sans from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="kili-logo.png" alt="Kili Technologies Logo">
+        </div>
+
+        <button class="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Desktop Nav -->
+        <nav class="nav-menu" id="desktopNav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="solutions.html">Solutions</a>
+                <div class="dropdown-content">
+                    <a href="das.html">Data Acquisition System (DAS)</a>
+                    <a href="ems.html">Energy Management System (EMS)</a>
+                    <a href="brp.html">BRP as a Service</a> 
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Mobile Nav (hidden by default) -->
+        <nav class="nav-menu" id="mobileNav" style="display: none;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="mobile-dropdown" id="mobileSolutions">
+                <button class="mobile-dropdown-toggle">Solutions</button>
+                <div class="mobile-dropdown-content">
+                    <a href="das.html">Data Acquisition System (DAS)</a>
+                    <a href="ems.html">Energy Management System (EMS)</a>
+                    <a href="brp.html">BRP as a Service</a> 
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <img src="Kill-Tech.png" alt="Solar panels in Africa" class="hero-img" 
+             onerror="this.style.backgroundColor='#1b3350'; this.style.opacity='0.8';">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Accelerating Africa's Renewable<br>Energy Transition</h1>
+            <p>Bridging Technology and Capital for Africa's Infrastructure Growth</p>
+            <a href="contact.html" class="contact-btn">Contact Us</a>
+        </div>
+    </section>
+
+    <section class="solutions" id="solutions">
+        <h2>Our Solutions</h2>
+        <div class="solutions-grid">
+            <!-- DAS Card -->
+            <a href="das.html" class="solution-card" style="text-decoration: none; color: inherit;">
+                <img src="DAS.png" alt="Data Acquisition System"
+                     onerror="this.src='https://via.placeholder.com/300x200/2e4453/FFFFFF?text=DAS'">
+                <div class="card-overlay">Click to explore</div>
+                <div class="card-content">
+                    <h3>Data Acquisition System (DAS)</h3>
+                    <ul>
+                        <li>● Real-time monitoring & validation</li>
+                        <li>● Integrates with Evident & XPansiv CBL</li>
+                    </ul>
+                    <span class="explore-hint">→ Explore</span>
+                </div>
+            </a>
+
+            <!-- EMS Card -->
+            <a href="ems.html" class="solution-card" style="text-decoration: none; color: inherit;">
+                <img src="EMS.png" alt="Energy Management System"
+                     onerror="this.src='https://via.placeholder.com/300x200/2e4453/FFFFFF?text=EMS'">
+                <div class="card-overlay">Click to explore</div>
+                <div class="card-content">
+                    <h3>Energy Management System (EMS)</h3>
+                    <ul>
+                        <li>● Optimises generation & storage</li>
+                        <li>● Enables grid-balancing & forecasting</li>
+                    </ul>
+                    <span class="explore-hint">→ Explore</span>
+                </div>
+            </a>
+
+            <!-- BRP Card  -->
+            <a href="brp.html" class="solution-card" style="text-decoration: none; color: inherit;">
+                <img src="BRP.png" alt="BRP as a Service"
+                     onerror="this.src='https://via.placeholder.com/300x200/2e4453/FFFFFF?text=BRP'">
+                <div class="card-overlay">Click to explore</div>
+                <div class="card-content">
+                    <h3>BRP as a Service</h3>
+                    <ul>
+                        <li>● Full regulatory compliance</li>
+                        <li>● REC issuance & trading support</li>
+                    </ul>
+                    <span class="explore-hint">→ Explore</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="products-features" id="products">
+        <h2>Products & Features</h2>
+        <div class="products-grid">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="circle-header">Hardware Gateways</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <ul>
+                            <li>● Towersense (Advanced Edge)</li>
+                            <li>● V-Raptor (Cloud-Based)</li>
+                            <li>● Towerlite (Lightweight)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="circle-header">Software Suite</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <ul>
+                            <li>● Real-time dashboards</li>
+                            <li>● Remote device control</li>
+                            <li>● Advanced analytics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="circle-header">Value Add Services</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <ul>
+                            <li>● ESG & regulatory reporting</li>
+                            <li>● Renewable Energy Certificates (RECs)</li>
+                            <li>● BRP-as-a-Service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- === ANIMATED STATS SECTION === -->
+        <div class="stats-section">
+            <div class="stat-card" data-target="12" data-suffix="+">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Deployed in <strong>sites</strong> across SA & Namibia</div>
+            </div>
+            
+            <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" class="custom-arrow">
+                    <path d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
+                </svg>
+            </div>
+            
+            <div class="stat-card" data-target="99.94" data-suffix="%">
+                <div class="stat-number">0</div>
+                <div class="stat-label"><strong>Uptime</strong> for Tier-1 Telecom clients — exceeding industry SLAs</div>
+            </div>
+            
+            <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" class="custom-arrow">
+                    <path d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/>
+                </svg>
+            </div>
+            
+            <div class="stat-card" data-target="2.3" data-suffix="M">
+                <div class="stat-number">0</div>
+                <div class="stat-label"><strong>$</strong> REC revenue enabled in within 6 months</div>
+            </div>
+        </div>
+
+            <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="wc-content">
+                <div class="wc-image">
+                    <img src="us.jpg" alt="Kili Technologies Team" onerror="this.src='https://via.placeholder.com/500x400/1a3d56/FFFFFF?text=Our+Team'">
+                </div>
+                <div class="wc-text">
+                    <h2>Why Choose Us</h2>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>Proven Expertise</span>
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>► Over 12+ deployments across Southern Africa, with deep experience in telecom, energy, and regulatory compliance environments.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>End-to-End Ownership</span>
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>► From hardware gateways to REC monetisation — we own the full stack, ensuring seamless integration and accountability.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>Bank-Backed Reliability</span>
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>► Our BRP-as-a-Service is backed by financial institutions, providing settlement guarantees and liquidity for risk-free market entry.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>Africa-First Innovation</span>
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>► Built for Africa’s unique challenges — intermittent connectivity, regulatory complexity, and scale — with local support and global standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ===== TRUSTED INTEGRATIONS (FLOATING ORBITAL CIRCLE) ===== -->
+<section class="trusted-integrations floating-orbit">
+    <div class="container">
+        <h2>Trusted Integrations</h2>
+        <p class="subtext">Hover or interact with the floating icons to explore our ecosystem</p>
+
+        <div class="orbit-container">
+            <div class="icon-wrapper" data-name="XPansiv CBL">
+                <img src="xpansiv.png" alt="XPansiv CBL" class="icon-img">
+                <div class="tooltip">XPansiv CBL</div>
+            </div>
+
+            <div class="icon-wrapper" data-name="IoT.nxt">
+                <img src="iot.png" alt="IoT.nxt" class="icon-img">
+                <div class="tooltip">IoT.nxt</div>
+            </div>
+
+            <div class="icon-wrapper" data-name="Bank of America">
+                <img src="boa.png" alt="Bank of America" class="icon-img">
+                <div class="tooltip">Bank of America</div>
+            </div>
+
+            <div class="icon-wrapper" data-name="Evident">
+                <img src="evident.jpg" alt="Evident" class="icon-img">
+                <div class="tooltip">Evident</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-col logo-col">
+            <div class="footer-logo">
+                <img src="kili-logo.png" alt="Kili Technologies Logo">
+            </div>
+            <p class="footer-tagline">Powering Africa’s clean energy future</p>
+        </div>
+
+        <div class="footer-col contact-col">
+            <h3>Contact Us</h3>
+            <address>
+                <p><span class="icon"></span> 7 West Quay Road, Cape Town</p>
+                <p><span class="icon"></span> +27 76 592 7136</p>
+                <p><span class="icon"></span> <a href="mailto:info@kilitechnologies.com">info@kilitechnologies.com</a></p>
+                <p><span class="icon"></span> Mon–Fri: 8:00 AM – 5:00 PM(SAST)</p>
+            </address>
+        </div>
+
+        <div class="footer-col links-col">
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col social-col">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/company/kili-energy-pty-ltd/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <img src="linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 by Ferguson media. All rights reserved.</p>
+    </div>
+</footer>
+
+    <button id="backToTop" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+   <script src="script.js"></script>
+</body>
+</html>
