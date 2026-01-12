@@ -1,60 +1,56 @@
- 
+document.addEventListener('DOMContentLoaded', () => {
+    // === HAMBURGER MENU (MATCHES index.js EXACTLY) ===
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.getElementById('mobileNav');
 
-        // Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+    if (hamburger && mobileNav) {
+        hamburger.addEventListener('click', () => {
+            const isActive = mobileNav.style.display === 'flex';
+            mobileNav.style.display = isActive ? 'none' : 'flex';
+            hamburger.classList.toggle('active');
+        });
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    // Optional: animate hamburger → ×
-    hamburger.classList.toggle('active');
-});
+        // Close mobile menu when clicking any link
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.style.display = 'none';
+                hamburger.classList.remove('active');
+            });
+        });
+    }
 
-        document.addEventListener('DOMContentLoaded', () => {
-          document.querySelectorAll('.social-icons img').forEach(img => {
-            img.style.cursor = 'pointer';
-            img.setAttribute('tabindex', '0');
+    // === SOCIAL ICONS ===
+    document.querySelectorAll('.social-icons img').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.setAttribute('tabindex', '0');
 
-            const handleClick = () => {
-              const parent = img.closest('a');
-              if (parent && parent.href) {
+        const handleClick = () => {
+            const parent = img.closest('a');
+            if (parent && parent.href) {
                 window.open(parent.href, '_blank', 'noopener,noreferrer');
-              }
-            };
+            }
+        };
 
-            img.addEventListener('click', handleClick);
-            img.addEventListener('keydown', e => {
-              if (e.key === 'Enter' || e.key === ' ') {
+        img.addEventListener('click', handleClick);
+        img.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 handleClick();
-              }
-            });
-
-            img.addEventListener('mouseenter', () => img.style.transform = 'scale(1.15)');
-            img.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
-          });
+            }
         });
 
-
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('backToTop');
-
-    // Show button after scrolling down 400px
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            btn.classList.add('show');
-        } else {
-            btn.classList.remove('show');
-        }
+        img.addEventListener('mouseenter', () => img.style.transform = 'scale(1.15)');
+        img.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
     });
 
-    // Smooth scroll to top when clicked
-    btn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    // === BACK TO TOP BUTTON ===
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('show', window.scrollY > 400);
         });
-    });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });

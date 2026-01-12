@@ -72,15 +72,17 @@
         }
 
         .brand img {
-            height: 150px;
-            margin-top: -30px;
-            margin-left: -80px;
+            height: 210px;
+            margin-top: -60px;
+            margin-left: -150px;
+            filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
         }
 
         .nav-menu {
             display: flex;
             gap: 1.8rem;
             margin-top: -30px;
+            
         }
 
         .nav-menu a {
@@ -871,8 +873,10 @@
         }
 
         .footer-logo img {
-            height: 120px;
+            height: 160px;
             margin-bottom: 0.8rem;
+            filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+            
         }
 
         /* Contact Info — NO ICONS, plain text */

@@ -11,9 +11,11 @@
 </head>
 <body>
     <header>
-        <div class="brand">
-            <img src="images/kili-logo.png" alt="Kili Technologies Logo">
-        </div>
+<div class="brand">
+    <a href="index.html">
+        <img src="images/kili-logo.png" alt="Kili Technologies Logo">
+    </a>
+</div>
 
         <button class="hamburger" aria-label="Toggle menu">
             <span class="hamburger-line"></span>
@@ -22,19 +24,29 @@
         </button>
 
 
-                <nav class="nav-menu" id="desktopNav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <div class="dropdown">
-                <a href="solutions.html">Solutions</a>
-                <div class="dropdown-content">
-                    <a href="das.html">Data Acquisition System (DAS)</a>
-                    <a href="ems.html">Energy Management System (EMS)</a>
-                    <a href="brp.html">BRP as a Service</a> 
-                </div>
-            </div>
-            <a href="contact.html">Contact</a>
-        </nav>
+<!-- Desktop Nav -->
+<nav class="nav-menu" id="desktopNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+        <a href="solutions.html">Solutions</a>
+        <div class="dropdown-content">
+            <a href="das.html">I-RECs Monetisation</a>
+            <a href="ems.html">Energy Management System (EMS)</a>
+            <a href="brp.html">BRP as a Service</a> 
+        </div>
+    </div>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Mobile Nav -->
+<nav class="nav-menu" id="mobileNav" style="display: none;">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
     </header>
 
     <!-- About Section -->
@@ -44,10 +56,9 @@
             <div class="about-content">
                 <h1>About Us</h1>
                 <p>
-                    Kili Tech is a renewable-energy technology company dedicated to accelerating Africa’s transition to clean, reliable, and financially sustainable power. We specialise in building advanced Data Acquisition Systems (DAS) and Energy Management Systems (EMS) that enable organisations to capture, verify, optimise, and monetise their energy data with confidence.
-                </p>
-                <p>
-                    Rooted in innovation and supported by strategic advisors, industry experts, and a strong technological backbone, Kili Tech delivers end-to-end visibility, operational efficiency, and new revenue pathways for organisations investing in renewable energy.
+                    Kili Tech is a clean technology company dedicated to accelerating Africa’s transition to clean, reliable, and financially sustainable power.
+                   </p>
+                    <p>Through our Data Acquisition Systems (DAS) and Energy Management Systems (EMS) of products<BR>1) Enable energy generators to capture, verify, optimise, and monetise their green energy attributes with confidence. <br>2) Help Commercial & Industrial customers to drive energy efficiency.
                 </p>
             </div>
         </div>
@@ -60,17 +71,17 @@
         <div class="value-card">
             <img class="value-icon" src="images/integrity.jpg" alt="Integrity">
             <div class="value-title">Integrity</div>
-            <div class="value-desc">Trusted, verifiable, and bankable data streams.</div>
+            <div class="value-desc">Bankable, audit-ready data trusted by financiers and regulators.</div>
         </div>
         <div class="value-card">
             <img class="value-icon" src="images/innovation.png" alt="Innovation">
             <div class="value-title">Innovation</div>
-            <div class="value-desc">Cutting-edge IoT, monitoring, analytics, and automation.</div>
+            <div class="value-desc">Real-time IoT analytics that unlock new revenue from clean energy.</div>
         </div>
         <div class="value-card">
             <img class="value-icon" src="images/partnership.png" alt="Partnership">
             <div class="value-title">Partnership</div>
-            <div class="value-desc">Collaborative solutions built with and for our clients.</div>
+            <div class="value-desc">We co-build solutions with utilities, IPPs, and corporates.</div>
         </div>
     </div>
 </section>
@@ -100,7 +111,7 @@
             <!-- CEO -->
             <div class="leader-card">
                 <!-- Replace 'm-dube.jpg' -->
-                <img class="leader-photo" src="images/placeholder.jpg" alt="Mr. M. Dube">
+                <img class="leader-photo" src="images/dube.png" alt="Mr. M. Dube">
                 <div class="leader-name">Mr. M. Dube</div>
                 <div class="leader-role">Chief Executive Officer</div>
             </div>
@@ -108,7 +119,7 @@
             <!-- Advisory Board -->
             <div class="leader-card advisory">
                
-                <img class="leader-photo" src="images/placeholder.jpg" alt="Ambassador V.K. Khumalo">
+                <img class="leader-photo" src="images/khumalo.png" alt="Ambassador V.K. Khumalo">
                 <div class="leader-name">Ambassador V.K. Khumalo</div>
                 <div class="leader-role">Advisory Board</div>
             </div>
@@ -142,28 +153,70 @@
         </div>
     </section>
 
- 
+ <!-- Why Africa? Section (Left Text + Right Image) -->
+<section class="why-africa-section">
+    <div class="why-africa-container">
+        <div class="why-africa-text">
+            <h2>Why Africa?</h2>
+            <p>Africa is home to <strong>60% of the world’s best solar resources</strong> and vast untapped wind, hydro, and geothermal potential—yet it accounts for <strong>less than 3% of global cumulative CO₂ emissions</strong>. Despite this, over <strong>600 million people</strong> in Africa still lack access to electricity, and many businesses face crippling costs from unreliable grids and diesel dependence.</p>
+            <p>But this isn’t just a challenge—it’s the <strong>greatest clean energy opportunity of our time</strong>.</p>
+            <p>At Kili Tech, we see a continent poised for leapfrog innovation. With falling renewable costs, rising digital infrastructure, and a young, tech-savvy population, Africa doesn’t need to replicate the fossil-fueled past—it can build a <strong>decentralized, data-driven, and democratized energy future</strong> from the ground up.</p>
+
+        </div>
+
+        <div class="about-gradient-wrapper"></div>
+        <div class="why-africa-image">
+
+            <img src="images/dirt.jpg" alt="Africa's Solar Potential Map" />
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
+
     <footer class="site-footer">
-        <div class="footer-top">
-            <div class="footer-logo">
-                <img src="images/kili-logo.png" alt="Kili Technologies Logo">
+        <div class="footer-grid">
+            <div class="footer-col logo-col">
+                <div class="footer-logo">
+                    <img src="images/kili-logo.png" alt="Kili Technologies Logo">
+                </div>
+                <p class="footer-tagline">Powering Africa’s clean energy future</p>
             </div>
-            <div class="footer-social">
-                <h3>Connect with us</h3>
+
+            <div class="footer-col contact-col">
+                <h3>Contact Us</h3>
+                <address>
+                    <p>Block B, Infinity Business Park, Cnr Winnie Mandela <br>Dr & Pieter Wenning Rd, Fourways, 219</p>
+                    <p>+27 73 886 8164</p>
+                    <p><a href="mailto:Info@kilitech.co.za">Info@kilitech.co.za</a></p>
+                    <p>Mon–Fri: 8:00 AM – 5:00 PM</p>
+                </address>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col social-col">
+                <h3>Follow Us</h3>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/" target="_blank">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
                         <img src="images/instagram.png" alt="Instagram">
                     </a>
-                    <a href="https://www.linkedin.com/company/kili-energy-pty-ltd/" target="_blank">
+                    <a href="https://www.linkedin.com/company/kili-energy-pty-ltd/" target="_blank" rel="noopener" aria-label="LinkedIn">
                         <img src="images/linkedin.png" alt="LinkedIn">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            <p>© 2025 by Kili Technologies</p>
+
+        <div class="footer-bottom">
+            <p>© 2026 Kili Technologies. All rights reserved. Site by <a href="https://fergusonmedia.co.za" target="_blank" style="color:#007bff;text-decoration:underline;">Ferguson Media</a>.</p>
         </div>
     </footer>
 

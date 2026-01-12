@@ -7,13 +7,17 @@
     <!-- Public Sans from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="css/contact.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
   
 </head>
-<body>
+
     <header>
         <div class="brand">
-            <img src="images/kili-logo.png" alt="Kili Technologies Logo">
-        </div>
+    <a href="index.html">
+        <img src="images/kili-logo.png" alt="Kili Technologies Logo">
+    </a>
+</div>
 
         <button class="hamburger" aria-label="Toggle menu">
             <span class="hamburger-line"></span>
@@ -28,7 +32,7 @@
             <div class="dropdown">
                 <a href="solutions.html">Solutions</a>
                 <div class="dropdown-content">
-                    <a href="das.html">Data Acquisition System (DAS)</a>
+                    <a href="das.html">I-RECs Monetisation</a>
                     <a href="ems.html">Energy Management System (EMS)</a>
                     <a href="brp.html">BRP as a Service</a> 
                 </div>
@@ -51,9 +55,9 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-
+<body>
     <section class="hero" id="home">
-        <!-- VIDEO REPLACES IMAGE -->
+        <!-- VIDEO  -->
         <video class="hero-img" autoplay muted loop playsinline>
             <source src="images/in.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -64,24 +68,68 @@
             <p>We’re here to help you accelerate Africa’s energy transition</p>
         </div>
 
-        <!-- Contact Form Overlay -->
-        <div class="contact-form-overlay">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="fullName" class="form-control" placeholder="Your name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" class="form-control" placeholder="Your email" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="subject" class="form-control" placeholder="What’s this about?" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" class="form-control" placeholder="How can we assist you?" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+
+        <div class="contact-cards">
+  <div class="card">
+    <img src="images/map-icon.svg" alt="Location" class="card-icon">
+    <h3>Our Main Office</h3>
+    <p>Infinity Business Park, Cnr Winnie Mandela Dr & Pieter Wenning Rd, Fourways, 2193</p>
+  </div>
+
+  <div class="card">
+    <img src="images/phone-icon.svg" alt="Phone" class="card-icon">
+    <h3>Phone Number</h3>
+    <p>+27 73 886 8164</p>
+  </div>
+
+  <div class="card">
+    <img src="images/mail-icon.svg" alt="Email" class="card-icon">
+    <h3>Email</h3>
+    <p><a href="mailto:Info@kilitech.co.za">Info@kilitech.co.za</a></p>
+  </div>
+
+  <div class="card">
+    <img src="images/clock-icon.svg" alt="Hours" class="card-icon">
+    <h3>Business Hours</h3>
+    <p>Mon–Fri: 8:00 AM – 5:00 PM</p>
+  </div>
+</div>
+
+<!-- ===  CONTACT CARD WITH FORM + MAP === -->
+<div class="contact-card">
+  <div class="contact-form-column">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+
+        <div class="form-group">
+  <input type="text" id="fullName" class="form-control" placeholder="Name" required>
+</div>
+<div class="form-group">
+  <input type="email" id="email" class="form-control" placeholder="Email" required>
+</div>
+<div class="form-group">
+  <input type="tel" id="phone" class="form-control" placeholder="contact number" required>
+</div>
+<div class="form-group">
+  <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+</div>
+<div class="form-group">
+  <textarea id="message" class="form-control" placeholder="Message" required></textarea>
+</div>
+            <p class="privacy-note">
+        BY SUBMITTING, YOU AGREE TO OUR 
+        <a href="docs/privacy-policy.pdf" download="privacy-policy.pdf">PRIVACY POLICY</a>.
+      </p>
+      <button type="submit" class="submit-btn">Talk to an Energy specialist</button>
+
+    </form>
+  </div>
+
+  <div class="contact-map-column">
+    <div id="contactMap"></div>
+  </div>
+</div>
+            
         </div>
     </section>
 
@@ -97,9 +145,9 @@
             <div class="footer-col contact-col">
                 <h3>Contact Us</h3>
                 <address>
-                    <p>7 West Quay Road</p>
-                    <p>+27 76 592 7136</p>
-                    <p><a href="mailto:info@kilitechnologies.com">info@kilitechnologies.com</a></p>
+                    <p>Block B, Infinity Business Park, Cnr Winnie Mandela <br>Dr & Pieter Wenning Rd, Fourways, 219</p>
+                    <p>+27 73 886 8164</p>
+                    <p><a href="mailto:Info@kilitech.co.za">Info@kilitech.co.za</a></p>
                     <p>Mon–Fri: 8:00 AM – 5:00 PM</p>
                 </address>
             </div>
@@ -108,7 +156,7 @@
                 <h3>Quick Links</h3>
                 <ul class="quick-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -127,7 +175,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2025 by Ferguson media. All rights reserved.p>
+            <p>© 2026 Kili Technologies. All rights reserved. Site by <a href="https://fergusonmedia.co.za" target="_blank" style="color:#007bff;text-decoration:underline;">Ferguson Media</a>.</p>
         </div>
     </footer>
 
@@ -137,5 +185,6 @@
         </svg>
     </button>
    <script src="js/contact.js"></script>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 </html>
