@@ -115,7 +115,7 @@
 }
 
 .brand a img {
-    display: block; /* removes tiny gap under image */
+    display: block; 
 }
 
         .nav-menu {
@@ -335,7 +335,7 @@
             box-shadow: 0 6px 16px rgba(0,123,255,0.3);
         }
 
-        /* FOOTER — MATCHES index.html EXACTLY */
+        /* FOOTER */
         .site-footer {
             background-color: #fafafa;
             color: #2e4453;
@@ -632,7 +632,6 @@
   background: #fafafa;
   border-radius: 30px;
   padding: 1.9rem;
-  /* box-shadow: 0 4px 16px rgba(0,0,0,0.08); */
   color: #1b3350;
 
   /* Centering */
@@ -712,36 +711,23 @@
   font-weight: 500;
 }
 
-.card a:hover {
-  text-decoration: underline;
-}
+
 
 /* ===== HOVER EFFECTS ===== */
-.card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow:
-    0 10px 25px -5px rgba(0, 123, 255, 0.25),
-    0 20px 40px -10px rgba(0, 200, 255, 0.2),
-    0 0 0 2px rgba(0, 123, 255, 0.1),
-    0 0 30px rgba(0, 180, 255, 0.3);
-}
 
 .card:hover .card-icon {
   animation: energyPulse 1.5s infinite;
 }
 
 @keyframes energyPulse {
-  0%, 100% {
-    filter: brightness(0) saturate(100%) invert(33%) sepia(33%) saturate(687%) hue-rotate(180deg) brightness(95%) contrast(90%);
-    transform: scale(1);
-  }
+
   50% {
     filter: brightness(0) saturate(100%) invert(45%) sepia(45%) saturate(800%) hue-rotate(180deg) brightness(110%) contrast(95%);
     transform: scale(1.08);
   }
 }
 
-/* Wind-line accent (optional) */
+/* Wind-line */
 .card::before {
   content: '';
   position: absolute;
