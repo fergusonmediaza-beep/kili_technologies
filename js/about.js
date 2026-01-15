@@ -1,22 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // === HAMBURGER MENU (MATCHES index.js EXACTLY) ===
+    // Hamburger toggle — FIXED
     const hamburger = document.querySelector('.hamburger');
     const mobileNav = document.getElementById('mobileNav');
-
+    
     if (hamburger && mobileNav) {
         hamburger.addEventListener('click', () => {
             const isActive = mobileNav.style.display === 'flex';
             mobileNav.style.display = isActive ? 'none' : 'flex';
-            hamburger.classList.toggle('active');
+            hamburger.classList.toggle('active'); 
         });
+    }
 
-        // Close mobile menu when clicking any link
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.style.display = 'none';
-                hamburger.classList.remove('active');
+
+        // Mobile dropdown toggle
+    const mobileDropdown = document.getElementById('mobileSolutions');
+    if (mobileDropdown) {
+        const toggleBtn = mobileDropdown.querySelector('.mobile-dropdown-toggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                mobileDropdown.classList.toggle('active');
             });
-        });
+        }
     }
 
     // === SOCIAL ICONS ===

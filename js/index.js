@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             const isActive = mobileNav.style.display === 'flex';
             mobileNav.style.display = isActive ? 'none' : 'flex';
-            hamburger.classList.toggle('active'); // Clean toggle
-            // ⚠️ Removed desktopNav manipulation — handled by CSS only
+            hamburger.classList.toggle('active'); 
         });
     }
 

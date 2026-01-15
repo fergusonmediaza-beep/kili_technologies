@@ -456,6 +456,48 @@
         z-index: 999;
     }
 
+    /* === Mobile Dropdown Styles === */
+.mobile-dropdown {
+    width: 100%;
+    text-align: center;
+}
+
+
+.mobile-dropdown-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    background: #1a3d56;
+    border-radius: 6px;
+    margin-top: 0.3rem;
+}
+
+.mobile-dropdown.active .mobile-dropdown-content {
+    display: block;
+}
+
+.mobile-dropdown-content a {
+    display: block;
+    color: #fafafa;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    font-size: 1.1rem
+}
+
+.mobile-dropdown-content a:hover {
+    background-color: #0e2a3c;
+}
+
 
     /* About Section */
     .about-section {

@@ -39,13 +39,49 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<!-- Mobile Nav -->
-<nav class="nav-menu" id="mobileNav" style="display: none;">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="solutions.html">Solutions</a>
-    <a href="contact.html">Contact</a>
-</nav>
+        <header>
+    <div class="brand">
+        <a href="index.html">
+            <img src="images/kili-logo.png" alt="Kili Technologies Logo">
+        </a>
+    </div>
+
+    <button class="hamburger" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-menu" id="desktopNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+            <a href="">Solutions</a>
+            <div class="dropdown-content">
+                <a href="das.html">I-RECs Monetisation</a>
+                <a href="ems.html">Energy Management System (EMS)</a>
+                <a href="brp.html">BRP as a Service</a> 
+            </div>
+        </div>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav class="nav-menu mobile-nav" id="mobileNav" style="display: none;">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="mobile-dropdown" id="mobileSolutions">
+            <button class="mobile-dropdown-toggle">Solutions</button>
+            <div class="mobile-dropdown-content">
+                <a href="das.html">I-RECs Monetisation</a>
+                <a href="ems.html">Energy Management System (EMS)</a>
+                <a href="brp.html">BRP as a Service</a> 
+            </div>
+        </div>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
     </header>
 
