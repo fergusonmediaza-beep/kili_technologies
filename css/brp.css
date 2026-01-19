@@ -361,6 +361,7 @@ header:not(.page-header) {
 }
 .footer-bottom p { font-size: 0.9rem; color: #666666; margin: 0; }
 
+
 /* ==== MOBILE STYLES ==== */
 @media (max-width: 768px) {
     /* Header */

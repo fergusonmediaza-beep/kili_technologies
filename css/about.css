@@ -97,6 +97,7 @@
     .hamburger.active .hamburger-line:nth-child(3) {
         transform: rotate(-45deg) translateY(-6px);
     }
+    
 }
 
         /* ==== ABOUT SECTION ==== */
@@ -415,6 +416,10 @@
             filter: brightness(0) invert(1);
             transition: all 0.3s;
         }
+
+        .social-col .social-icons img.doyou-icon {
+    filter: none; 
+}
 
         .social-col .social-icons img:hover {
             filter: grayscale(0%) brightness(1);
