@@ -29,7 +29,9 @@ header:not(.page-header) {
 }
 
 .brand img {
-    height: 120px;
+    height: 210px;
+    margin-top: -60px;
+    margin-left: -150px;
     filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
 }
 
