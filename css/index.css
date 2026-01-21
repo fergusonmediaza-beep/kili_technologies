@@ -1110,6 +1110,34 @@
     justify-content: center;
 }
 
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:#2e4453;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cookie-banner a {
+  color: #2e4453;
+}
+
+.cookie-banner button {
+  background: #fafafa;
+  border: none;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
         @media (max-width: 480px) {
             .hero h1 {
                 font-size: 1.9rem;
