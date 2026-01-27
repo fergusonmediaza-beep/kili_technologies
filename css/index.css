@@ -842,7 +842,7 @@
     100% { transform: translate(-50%, -50%) translate(0px, -140px); }
 }
 
-        /* FOOTER — MATCHES index.html EXACTLY */
+        /* FOOTER*/
         .site-footer {
             background-color: white;
             color: #2e4453;
@@ -1081,7 +1081,7 @@
             }
 
             .hero-content {
-                margin-top: 4rem; /* reduced on mobile */
+                margin-top: 4rem; 
             }
 
             .contact-form-overlay {

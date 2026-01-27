@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="css/contact.css">
      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   
 </head>
 
@@ -65,7 +65,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Get In Touch</h1>
-            <p>We’re here to help you accelerate Africa’s energy transition</p>
+            <p>We're here to help you accelerate Africa's energy transition</p>
         </div>
 
 
@@ -120,7 +120,10 @@
         BY SUBMITTING, YOU AGREE TO OUR 
         <a href="docs/privacy-policy.pdf" download="privacy-policy.pdf">PRIVACY POLICY</a>.
       </p>
-      <button type="submit" class="submit-btn">Talk to an Energy specialist</button>
+      <button type="submit" class="submit-btn g-recaptcha" 
+              data-sitekey="6LfKsFcsAAAAAGHVIS4mgGNy5orKm5FwPQMfhflv" 
+              data-callback="onSubmit" 
+              data-action="submit">Talk to an Energy specialist</button>
 
     </form>
   </div>
@@ -139,7 +142,7 @@
                 <div class="footer-logo">
                     <img src="images/kili-logo.png" alt="Kili Technologies Logo">
                 </div>
-                <p class="footer-tagline">Powering Africa’s clean energy future</p>
+                <p class="footer-tagline">Powering Africa's clean energy future</p>
             </div>
 
             <div class="footer-col contact-col">

@@ -65,34 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             localStorage.setItem('contactFormData', JSON.stringify(data));
         });
-
-        // Handle form submission via mailto
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const name = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            const mailtoLink = `mailto:Info@kilitech.co.za?subject=${encodeURIComponent(subject)}&body=Name:%20${encodeURIComponent(name)}%0APhone:%20${encodeURIComponent(phone)}%0AEmail:%20${encodeURIComponent(email)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
-
-            window.location.href = mailtoLink;
-
-            // Show success message
-            const formContainer = contactForm.closest('.contact-form-column');
-            formContainer.innerHTML = `
-                <div style="text-align: center; padding: 2rem 1rem;">
-                    <h3 style="font-size: 1.4rem; font-weight: 700; color: #1b3350; margin-bottom: 0.5rem;">Thank you!</h3>
-                    <p style="font-size: 1.1rem; color: #5a6c7d; line-height: 1.5;">
-                        We’ll get back to you within 24 hours.
-                    </p>
-                </div>
-            `;
-
-            localStorage.removeItem('contactFormData');
-        });
     }
 
     // === LEAFLET MAP INITIALIZATION ===
@@ -112,3 +84,36 @@ document.addEventListener('DOMContentLoaded', () => {
             .openPopup();
     }
 });
+
+// === RECAPTCHA CALLBACK FUNCTION ===
+function onSubmit(token) {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        const name = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        const mailtoLink = `mailto:Info@kilitech.co.za?subject=${encodeURIComponent(subject)}&body=Name:%20${encodeURIComponent(name)}%0APhone:%20${encodeURIComponent(phone)}%0AEmail:%20${encodeURIComponent(email)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
+
+        window.location.href = mailtoLink;
+
+        // Show success message
+        const formContainer = contactForm.closest('.contact-form-column');
+        formContainer.innerHTML = `
+            <div style="text-align: center; padding: 2rem 1rem;">
+                <h3 style="font-size: 1.4rem; font-weight: 700; color: #1b3350; margin-bottom: 0.5rem;">Thank you!</h3>
+                <p style="font-size: 1.1rem; color: #5a6c7d; line-height: 1.5;">
+                    We'll get back to you within 24 hours.
+                </p>
+            </div>
+        `;
+
+        localStorage.removeItem('contactFormData');
+        
+        // Reset reCAPTCHA
+        grecaptcha.reset();
+    }
+}
