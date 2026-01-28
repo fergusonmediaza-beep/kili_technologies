@@ -1,5 +1,4 @@
-
-        /* ---- Reset & Base ---- */
+/* ---- Reset & Base ---- */
         * {
             margin: 0;
             padding: 0;
@@ -230,6 +229,7 @@
     margin: 0 auto;
 }
 
+/* ==== LEADER CARD ==== */
 .leader-card {
     background: rgba(255, 255, 255, 0.06);
     border-radius: 8px;
@@ -238,6 +238,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .leader-card:hover {
@@ -265,11 +266,201 @@
     font-size: 0.95rem;
     color: #a0b8c8;
     font-weight: 400;
+    margin-bottom: 1rem;
 }
 
+/* ==== LEADER ACTIONS (LinkedIn + View Bio Button) ==== */
+.leader-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* LinkedIn Icon */
+.linkedin-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
+.linkedin-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* View Bio Button */
+.view-bio-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.view-bio-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.view-bio-btn:active {
+    transform: translateY(0);
+}
 
 .leader-card.advisory .leader-role {
     color: #88a0b0;
+}
+
+/* ==== BIO MODAL ==== */
+.bio-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.bio-modal.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bio-modal-content {
+    background: #2e4453;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    animation: slideUp 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.bio-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bio-modal-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+}
+
+.bio-modal-info {
+    flex: 1;
+    text-align: left;
+}
+
+.bio-modal-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: white;
+}
+
+.bio-modal-role {
+    font-size: 1rem;
+    color: #a0b8c8;
+}
+
+.bio-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    line-height: 1;
+}
+
+.bio-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bio-modal-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #d0e0f0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.bio-modal-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.bio-modal-linkedin:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.bio-modal-linkedin img {
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -572,6 +763,39 @@
 
     .leader-name {
         font-size: 1.05rem;
+    }
+
+    /* Leader Actions - Mobile Adjustments */
+    .leader-actions {
+        gap: 0.6rem;
+    }
+
+    .view-bio-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    /* Bio Modal Mobile */
+    .bio-modal-content {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+
+    .bio-modal-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio-modal-info {
+        text-align: center;
+    }
+
+    .bio-modal-name {
+        font-size: 1.3rem;
+    }
+
+    .bio-modal-text {
+        font-size: 0.95rem;
     }
 
     /* Footer */
